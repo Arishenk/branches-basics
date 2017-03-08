@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-long int  percent(int srok, long int summa) {
-    long int dohod = 0;
+    int  percent(int srok, int summa) {
+    int dohod = 0;
     if (srok < 31) dohod = summa - (summa * 10) / 100;
     if ((srok > 30) && (srok < 121)) {
         if (summa > 100000) dohod = summa + (summa * 3) / 100; 
@@ -19,7 +19,7 @@ long int  percent(int srok, long int summa) {
     return dohod;
 }
 
-int check(int srok, long int summa) {   
+int check(int srok, int summa) {   
     int k = 0;
     if ((srok < 0) || (srok > 365) || (summa < 10000))  k = 0;
     else k = 1;							  
